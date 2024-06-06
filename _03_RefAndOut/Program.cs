@@ -19,12 +19,21 @@
             b = temp;
         }
 
+        static int Divide(int a, int b, out int remainder)
+        {
+            remainder = a % b;
+            return a / b;
+        }
+
         static void Main(string[] args)
         {
             int num1 = 10;
-            int num2 = 20;
+            int num2 = 3;
 
-            Swap(ref num1, ref num2);
+            int remain = 0;
+            int quot = Divide(num1, num2, out remain);
+
+            Console.WriteLine($"{num1} / {num2} = {quot} ({remain})");
         }
     }
 }
