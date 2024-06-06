@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_01_Datas", "_01_Datas\_01_Datas.csproj", "{8EE251FA-957B-4C0C-B3DF-205A5E50709D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_02_Enum", "_02_Enum\_02_Enum.csproj", "{B7B48E70-D150-405E-BF65-2E63C771CA0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_02_Enum", "_02_Enum\_02_Enum.csproj", "{B7B48E70-D150-405E-BF65-2E63C771CA0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_03_RefAndOut", "_03_RefAndOut\_03_RefAndOut.csproj", "{297A3E26-0AA2-472C-BBAB-5BE012F3158C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{B7B48E70-D150-405E-BF65-2E63C771CA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B48E70-D150-405E-BF65-2E63C771CA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B48E70-D150-405E-BF65-2E63C771CA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297A3E26-0AA2-472C-BBAB-5BE012F3158C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297A3E26-0AA2-472C-BBAB-5BE012F3158C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297A3E26-0AA2-472C-BBAB-5BE012F3158C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297A3E26-0AA2-472C-BBAB-5BE012F3158C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
