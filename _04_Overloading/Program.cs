@@ -25,6 +25,9 @@
              *  반갑습니다.
              *  반갑습니다.
              */
+
+            // 명명된 인수와 함께 사용
+            OptionalParam.PrintDetails("홍길동", address: "한국");   // Name: 홍길동, Age: 0, Address: 한국
         }
 
         static void Main(string[] args)

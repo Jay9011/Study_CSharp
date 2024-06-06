@@ -9,5 +9,10 @@
                 Console.WriteLine(message);
             }
         }
+
+        public static void PrintDetails(string name, int age = 0, string address = "")
+        {
+            Console.WriteLine($"Name: {name}, Age: {age}, Address: {address}");
+        }
     }
 }
