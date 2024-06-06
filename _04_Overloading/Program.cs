@@ -1,8 +1,8 @@
-﻿namespace _04_Overloading
+﻿namespace _04_Function
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void OverloadingTest()
         {
             int num1 = 10, num2 = 3;
 
@@ -15,27 +15,21 @@
 
             Console.WriteLine($"{num1} / {num2} = {result} ({remainder})"); // 10 / 3 = 3 (1)
         }
-    }
 
-    internal static class Calculator
-    {
-        public static int Divide(int a, int b)
+        static void OptionalParamTest()
         {
-            return a / b;
-        }
-        public static int Divide(int a, int b, out int remainder)
-        {
-            remainder = a % b;
-            return a / b;
+            OptionalParam.PrintMessage("안녕하세요."); // 안녕하세요.
+
+            OptionalParam.PrintMessage("반갑습니다.", 3);
+            /*  반갑습니다.
+             *  반갑습니다.
+             *  반갑습니다.
+             */
         }
 
-        public static int Divide(int a, int b, int c)   // C#에서는 `out` 키워드 또한 메서드 시그니처에 포함됨
+        static void Main(string[] args)
         {
-            return a / b;
+            OptionalParamTest();
         }
-        // public static int Divide(int b, int a)   // 매개변수의 이름은 메서드의 시그니처에 포함되지 않음
-        // {
-        //     return b / a;
-        // }
     }
 }

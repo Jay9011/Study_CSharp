@@ -12,9 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_01_Datas", "_01_Datas\_01_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_02_Enum", "_02_Enum\_02_Enum.csproj", "{B7B48E70-D150-405E-BF65-2E63C771CA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_03_RefAndOut", "_03_RefAndOut\_03_RefAndOut.csproj", "{297A3E26-0AA2-472C-BBAB-5BE012F3158C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_03_RefAndOut", "_03_RefAndOut\_03_RefAndOut.csproj", "{297A3E26-0AA2-472C-BBAB-5BE012F3158C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_04_Overloading", "_04_Overloading\_04_Overloading.csproj", "{506A7EE1-6E47-48BA-8275-357D01F941A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04_Function", "_04_Overloading\_04_Function.csproj", "{506A7EE1-6E47-48BA-8275-357D01F941A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
