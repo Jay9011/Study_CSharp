@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_03_RefAndOut", "_03_RefAnd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04_Function", "_04_Overloading\_04_Function.csproj", "{506A7EE1-6E47-48BA-8275-357D01F941A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_05_FormatSpecifier", "_05_FormatSpecifier\_05_FormatSpecifier.csproj", "{07839DD6-C877-496A-9D55-922FE89494DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05_FormatSpecifier", "_05_FormatSpecifier\_05_FormatSpecifier.csproj", "{07839DD6-C877-496A-9D55-922FE89494DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06_Class", "_06_Class\_06_Class.csproj", "{6BF164B3-BC91-419C-9E41-14E38CD83675}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{07839DD6-C877-496A-9D55-922FE89494DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07839DD6-C877-496A-9D55-922FE89494DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07839DD6-C877-496A-9D55-922FE89494DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF164B3-BC91-419C-9E41-14E38CD83675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF164B3-BC91-419C-9E41-14E38CD83675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF164B3-BC91-419C-9E41-14E38CD83675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF164B3-BC91-419C-9E41-14E38CD83675}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
