@@ -4,15 +4,14 @@
     {
         static void Main(string[] args)
         {
-            MyClass myClass1 = new MyClass();
-            myClass1.Value = 1;
-            myClass1.Name = "MyClass1";
+            BaseClass myClass = new DerivedClass();
+            myClass.PrintInfo();    // Name: DerivedClass, Value: 1, Description: 파생 클래스만의 멤버
 
-            MyClass myClass2 = new MyClass();
-            myClass2.Value = 1;
-            myClass2.Name = "MyClass2";
+            myClass.Name = "MyClass";
+            Console.WriteLine($"Class Name: {myClass.Name}");   // Class Name: MyClass
 
-            Console.WriteLine(myClass1.Equals(myClass2)); // True
+            // myClass.value = 10; // 접근 제한자로 인해 set 불가
+            Console.WriteLine($"Class Value: {myClass.value}");
         }
     }
 }
