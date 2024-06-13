@@ -6,8 +6,8 @@ namespace _07_OOP
     {
         static void Main(string[] args)
         {
-            BaseClass myClass = new DerivedClass("외부에서 넣어준 description");
-            myClass.PrintInfo();
+            int counter = StaticClass.counter;  // 출력: Static constructor
+            StaticClass C1 = new StaticClass(); // 출력 없음
         }
     }
 }
