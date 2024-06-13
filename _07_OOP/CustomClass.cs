@@ -25,25 +25,25 @@ namespace _07_OOP
     public class BaseClass
     {
         public string Name;
-
-        public int value
-        {
-            get { return value; }
-            protected set { this.value = value; }
-        }
+        protected int MyProperty;
 
         public BaseClass()
         {
             Name = "BaseClass";
-            value = 0;
+            MyProperty = 0;
+        }
+        public BaseClass(string name, int myProperty)
+        {
+            Name = name;
+            MyProperty = myProperty;
         }
 
         public virtual void PrintInfo()
         {
-            Console.WriteLine($"Name: {Name}, Value: {value}");
+            Console.WriteLine($"Class Name: {Name}");
+            Console.WriteLine($"MyProperty: {MyProperty}");
         }
     }
-
     public class DerivedClass : BaseClass
     {
         private string description;
@@ -51,13 +51,20 @@ namespace _07_OOP
         public DerivedClass()
         {
             Name = "DerivedClass";
-            value = 1;
+            MyProperty = 1;
             description = "파생 클래스만의 멤버";
+        }
+        public DerivedClass(string description) : base("DerivedClass", 1)   // 부모 클래스의 생성자 호출
+        {
+            this.description = description;
         }
 
         public override void PrintInfo()
         {
-            Console.WriteLine($"Name: {Name}, Value: {value}, Description: {description}");
+            base.MyProperty = 2;    // 부모 클래스의 protected 멤버에 접근 가능
+            base.PrintInfo();       // 부모 클래스의 메서드 호출
+
+            Console.WriteLine($"Description: {description}");
         }
     }
 }
