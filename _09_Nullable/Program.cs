@@ -30,6 +30,15 @@
             int? length = nullableStr?.Length;  // nullableStr이 null이면 null을 반환
             Console.WriteLine($"length : {length}");    // length :
             Console.WriteLine($"length?? : {length ?? -1}"); // length?? : -1
+
+            if(nullableStr?.Length > 0)
+            {
+                Console.WriteLine("nullableStr.Length > 0");
+            }
+            else
+            {
+                Console.WriteLine("nullableStr.Length <= 0");
+            }
         }
     }
 }
