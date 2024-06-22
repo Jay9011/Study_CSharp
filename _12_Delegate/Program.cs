@@ -1,10 +1,10 @@
 ﻿namespace _12_Delegate
 {
-    public delegate bool ActionBtnDelegate();
+    // public delegate bool ActionBtnDelegate();
 
     class DelegateTest
     {
-        public ActionBtnDelegate actionBtnDelegates;
+        private ActionBtnDelegate actionBtnDelegates;
 
         public ActionBtnDelegate GetNowOperableDelegate()
         {
@@ -26,6 +26,15 @@
             }
         }
     }
+    class EventTest
+    {
+        public event EventHandler actionBtnDelegates;
+
+        public void Action()
+        {
+            actionBtnDelegates?.Invoke(this, EventArgs.Empty);
+        }
+    }
 
     internal class Program
     {
@@ -41,10 +50,10 @@
         
         static void Main(string[] args)
         {
-            ActionBtnDelegate actionBtnDelegate1 = new ActionBtnDelegate(ActionBtn1);
-            ActionBtnDelegate actionBtnDelegate2 = ActionBtn2;
-
-            DelegateTest delegateTest = new DelegateTest();
+            // ActionBtnDelegate actionBtnDelegate1 = new ActionBtnDelegate(ActionBtn1);
+            // ActionBtnDelegate actionBtnDelegate2 = ActionBtn2;
+            //
+            // DelegateTest delegateTest = new DelegateTest();
             // delegateTest.SetActionDelegate(actionBtnDelegate1);
             // ActionBtnDelegate actionBtnDelegate = delegateTest.GetNowOperableDelegate();
             // if (actionBtnDelegate != null)
@@ -53,12 +62,43 @@
             //     // Now Action : _12_Delegate.ActionBtnDelegate
             // }
             // delegateTest.Action(); // ActionBtn1
-            
-            ActionBtnDelegate test = ActionBtn1;
-            test = test + ActionBtn2; // test += ActionBtn2;
-            test();
-            // ActionBtn1
-            // ActionBtn2
+            //
+            // ActionBtnDelegate test = ActionBtn1;
+            // test = test + ActionBtn2; // test += ActionBtn2;
+            // test();
+            // // ActionBtn1
+            // // ActionBtn2
+
+            // Player player = new Player();
+            // Item item = new Item();
+            // player.actionBtnDelegates = item.PickUp;
+            // player.OnAction(); // 아이템을 줍습니다.
+            //
+            // Door door = new Door();
+            // player.actionBtnDelegates = door.Open;
+            // player.OnAction(); // 문을 엽니다.
+            //
+            // Enemy enemy = new Enemy();
+            // player.actionBtnDelegates = enemy.StealthKill;
+            // player.OnAction(); // 암살을 합니다.
+
+            // Item item = new Item();
+            // player.actionBtnDelegates = item.PickUp;
+            // player.actionBtnDelegates.Invoke(); // 아이템을 줍습니다.
+
+            Player player = new Player();
+            Stamina stamina = new Stamina();
+            player.AddAction(stamina.UseStamina);
+
+            Door door = new Door();
+            player.AddAction(door.Open);
+            player.OnAction();
+            // 스태미너를 사용합니다.
+            // 문을 엽니다.
+
+            player.RemoveAction(door.Open);
+            player.OnAction();
+            // 스태미너를 사용합니다.
         }
     }
 }
