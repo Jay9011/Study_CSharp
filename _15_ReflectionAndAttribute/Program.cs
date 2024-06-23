@@ -1,4 +1,6 @@
 ﻿using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
 namespace _15_ReflectionAndAttribute
 {
@@ -16,7 +18,6 @@ namespace _15_ReflectionAndAttribute
         private int PrivateInt;
         protected double ProtectedDouble;
         public string PublicString;
-
         private void PrivateMethod()
         {
             Console.WriteLine("Program Private Method 호출");
