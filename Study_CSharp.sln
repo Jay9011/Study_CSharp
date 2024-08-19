@@ -40,7 +40,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_15_ReflectionAndAttribute"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_16_ExtensionMethod", "_16_ExtensionMethod\_16_ExtensionMethod.csproj", "{B56E398E-8B7E-40F7-8AC7-C5F1F98276E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_17_ASYNChronous", "_17_ASYNChronous\_17_ASYNChronous.csproj", "{B3577BAF-4495-4E9D-8BC1-3CBC122E1C8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_17_ASYNChronous", "_17_ASYNChronous\_17_ASYNChronous.csproj", "{B3577BAF-4495-4E9D-8BC1-3CBC122E1C8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_18_yield", "_18_yield\_18_yield.csproj", "{8151EA16-3487-464B-B0B7-0290FAFC1DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +118,10 @@ Global
 		{B3577BAF-4495-4E9D-8BC1-3CBC122E1C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3577BAF-4495-4E9D-8BC1-3CBC122E1C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3577BAF-4495-4E9D-8BC1-3CBC122E1C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8151EA16-3487-464B-B0B7-0290FAFC1DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8151EA16-3487-464B-B0B7-0290FAFC1DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8151EA16-3487-464B-B0B7-0290FAFC1DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8151EA16-3487-464B-B0B7-0290FAFC1DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
