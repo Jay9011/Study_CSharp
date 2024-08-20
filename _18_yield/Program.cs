@@ -89,9 +89,25 @@ namespace _18_yield
 
     internal class Program
     {
+        public static IEnumerable<int> Fibonacci(int count)
+        {
+            int previous = 0, current = 1;
+
+            for (int i = 0; i < count; i++)
+            {
+                yield return previous;
+
+                int next = previous + current;
+                previous = current;
+                current = next;
+            }
+        }
         static void Main(string[] args)
         {
-            InfSeqClass.Exmaple();
+            foreach (var number in Fibonacci(10))
+            {
+                Console.WriteLine(number);
+            }
         }
     }
 }
