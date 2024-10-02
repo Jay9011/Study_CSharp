@@ -1,4 +1,6 @@
-﻿namespace _21_Pattern_ObjectPooling
+﻿using System.Runtime.InteropServices;
+
+namespace _21_Pattern_ObjectPooling
 {
     public class MyObject: PoolObject
     {
@@ -58,6 +60,8 @@
         {
             Console.Clear();
             Console.WriteLine("Press 'C' to create object, 'Q' to quit");
+            Console.WriteLine($"Pool Size: {objectPool.Capacity}");
+            Console.WriteLine($"Usable Objects: {objectPool.InUseCount}");
             Console.WriteLine("\nObject Pool Status:");
             for (int i = 0; i < objectPool.Capacity; i++)
             {

@@ -14,16 +14,14 @@ public class PoolObject
 // 오브젝트 풀 클래스
 public class ObjectPool<T> where T : PoolObject, new()
 {
-    private readonly List<T> _pool;
-    private readonly int _maxSize;
+    private readonly List<T> _pool = new List<T>();
+    private int _maxSize;
 
     public ObjectPool(int maxSize = 10)
     {
-        _pool = new List<T>(maxSize);
-        _maxSize = maxSize;
         for (int i = 0; i < maxSize; i++)
         {
-            _pool.Add(new T());
+            Insert();
         }
     }
     public T Get(int index)
@@ -42,7 +40,22 @@ public class ObjectPool<T> where T : PoolObject, new()
             }
         }
 
-        return null;    // 모든 오브젝트가 사용중이면 null 반환
+        // 모든 오브젝트가 사용중이면 새로운 오브젝트를 생성하고 생성된 오브젝트를 반환
+        var obj = Insert();
+        obj.IsActive = true;
+        return obj;
+    }
+
+    public T Insert()
+    {
+        var obj = new T
+        {
+            IsActive = false
+        };
+        _maxSize++;
+        _pool.Add(obj);
+
+        return obj;
     }
 
     public void Release(T obj)
