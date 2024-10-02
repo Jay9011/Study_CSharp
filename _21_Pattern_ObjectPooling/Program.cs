@@ -9,12 +9,10 @@ namespace _21_Pattern_ObjectPooling
     }
     internal class Program
     {
-        private static ObjectPool<MyObject> objectPool;
+        private static readonly ObjectPool<MyObject> ObjectPool = new ObjectPool<MyObject>();
 
         static void Main(string[] args)
         {
-            objectPool = new ObjectPool<MyObject>(10);
-
             PrintObjectStatus();
 
             while (true)
@@ -33,7 +31,7 @@ namespace _21_Pattern_ObjectPooling
 
         private static void ActiveObject()
         {
-            var obj = objectPool.Use();
+            var obj = ObjectPool.Use();
             if (obj != null)
             {
                 PrintObjectStatus();
@@ -52,7 +50,7 @@ namespace _21_Pattern_ObjectPooling
 
         private static void DeactiveObject(MyObject obj)
         {
-            objectPool.Release(obj);
+            ObjectPool.Release(obj);
             PrintObjectStatus();
         }
 
@@ -60,12 +58,12 @@ namespace _21_Pattern_ObjectPooling
         {
             Console.Clear();
             Console.WriteLine("Press 'C' to create object, 'Q' to quit");
-            Console.WriteLine($"Pool Size: {objectPool.Capacity}");
-            Console.WriteLine($"Usable Objects: {objectPool.InUseCount}");
+            Console.WriteLine($"Pool Size: {ObjectPool.Capacity}");
+            Console.WriteLine($"Usable Objects: {ObjectPool.UsableCount}");
             Console.WriteLine("\nObject Pool Status:");
-            for (int i = 0; i < objectPool.Capacity; i++)
+            for (int i = 0; i < ObjectPool.Count; i++)
             {
-                PoolObject obj = objectPool.Get(i);
+                PoolObject obj = ObjectPool.Get(i);
                 Console.Write($"Object {obj.GetHashCode(), 10} is active: ");
                 if (obj.IsActive)
                 {
